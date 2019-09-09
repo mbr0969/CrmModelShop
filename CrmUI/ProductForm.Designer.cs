@@ -93,6 +93,11 @@
             this.countProduct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.countProduct.Location = new System.Drawing.Point(182, 106);
+            this.countProduct.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
             this.countProduct.Name = "countProduct";
             this.countProduct.Size = new System.Drawing.Size(270, 20);
             this.countProduct.TabIndex = 2;

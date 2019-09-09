@@ -11,23 +11,25 @@ namespace CrmUI {
             InitializeComponent();
         }
 
+       public ProductForm(Product product) :this() {
+           Product = product;
+           nameProduct.Text = Product.Name;
+           priceProduct.Value = Product.Price;
+           countProduct.Value = Product.Count;
+       }
+
         private void ProductForm_Load(object sender, EventArgs e) {
 
            
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        private void button1_Click(object sender, EventArgs e) {
 
-            Product = new Product()
-            {
-                Name = nameProduct.Text,
-                Price = priceProduct.Value,
-                Count = Convert.ToInt32(countProduct.Value)
-            };
+            var p = Product ?? new Product();
+            p.Name = nameProduct.Text;
+            p.Price = priceProduct.Value;
+            p.Count = Convert.ToInt32(countProduct.Value);
             Close();
-
-
         }
     }
 }
