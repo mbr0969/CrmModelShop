@@ -28,7 +28,7 @@ namespace CrmUI {
 
             Customer = new Customer()
             {
-                Name = textBox1.Text
+                Name = nameCustomer.Text
             };
             Close();
 

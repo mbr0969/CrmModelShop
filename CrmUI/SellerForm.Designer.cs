@@ -1,5 +1,5 @@
 ﻿namespace CrmUI {
-    partial class CustomerForm {
+    partial class SellerForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,28 +23,28 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.nameCustomer = new System.Windows.Forms.TextBox();
-            this.nameCustomerLbl = new System.Windows.Forms.Label();
+            this.nameSeller = new System.Windows.Forms.TextBox();
+            this.nameSellerLbl = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // nameCustomer
+            // nameSeller
             // 
-            this.nameCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.nameSeller.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.nameCustomer.Location = new System.Drawing.Point(117, 9);
-            this.nameCustomer.Name = "nameCustomer";
-            this.nameCustomer.Size = new System.Drawing.Size(253, 20);
-            this.nameCustomer.TabIndex = 0;
+            this.nameSeller.Location = new System.Drawing.Point(117, 9);
+            this.nameSeller.Name = "nameSeller";
+            this.nameSeller.Size = new System.Drawing.Size(253, 20);
+            this.nameSeller.TabIndex = 0;
             // 
-            // nameCustomerLbl
+            // nameSellerLbl
             // 
-            this.nameCustomerLbl.AutoSize = true;
-            this.nameCustomerLbl.Location = new System.Drawing.Point(12, 9);
-            this.nameCustomerLbl.Name = "nameCustomerLbl";
-            this.nameCustomerLbl.Size = new System.Drawing.Size(72, 13);
-            this.nameCustomerLbl.TabIndex = 1;
-            this.nameCustomerLbl.Text = "Введите имя";
+            this.nameSellerLbl.AutoSize = true;
+            this.nameSellerLbl.Location = new System.Drawing.Point(12, 9);
+            this.nameSellerLbl.Name = "nameSellerLbl";
+            this.nameSellerLbl.Size = new System.Drawing.Size(72, 13);
+            this.nameSellerLbl.TabIndex = 1;
+            this.nameSellerLbl.Text = "Введите имя";
             // 
             // button1
             // 
@@ -58,17 +58,17 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // CustomerForm
+            // SellerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 234);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.nameCustomerLbl);
-            this.Controls.Add(this.nameCustomer);
-            this.Name = "CustomerForm";
-            this.Text = "Покупатель";
-            this.Load += new System.EventHandler(this.CustomerForm_Load);
+            this.Controls.Add(this.nameSellerLbl);
+            this.Controls.Add(this.nameSeller);
+            this.Name = "SellerForm";
+            this.Text = "Продавец";
+            this.Load += new System.EventHandler(this.SellerForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -76,8 +76,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox nameCustomer;
-        private System.Windows.Forms.Label nameCustomerLbl;
+        private System.Windows.Forms.TextBox nameSeller;
+        private System.Windows.Forms.Label nameSellerLbl;
         private System.Windows.Forms.Button button1;
     }
 }
