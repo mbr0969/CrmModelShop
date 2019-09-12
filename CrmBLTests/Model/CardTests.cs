@@ -42,7 +42,6 @@ namespace CrmBL.Model.Tests {
             var carResult = card.GetAll();
 
             //assert
-
             Assert.AreEqual(expectedResult.Count, carResult.Count);
 
             for (int i = 0; i < expectedResult.Count; i++) {

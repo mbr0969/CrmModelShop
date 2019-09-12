@@ -1,8 +1,13 @@
 ﻿
 using System.Collections;
 using System.Collections.Generic;
-
+/// <summary>
+/// пространство имен бизнес модели
+/// </summary>
 namespace CrmBL.Model {
+    /// <summary>
+    /// Класс корзины
+    /// </summary>
     public class Card : IEnumerable {
         public Customer Customer {get; set;}
         public Dictionary<Product, int> Products { get; set; }
@@ -28,7 +33,6 @@ namespace CrmBL.Model {
                 }
             }
         }
-
 
         public List<Product> GetAll(){
             var result = new List<Product>();
