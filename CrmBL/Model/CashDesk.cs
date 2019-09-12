@@ -8,7 +8,7 @@ namespace CrmBL.Model {
     /// <summary>
     /// Касса 
     /// </summary>
-    class CashDesk {
+    public class CashDesk {
         CrmContext db = new  CrmContext();
         public int Number { get; set;}
         public Seller Seller { get; set;}

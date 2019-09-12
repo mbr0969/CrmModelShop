@@ -17,21 +17,21 @@ namespace CrmBL.Model.Tests {
                 Name = "testUser"
             };
 
-            var  product1 = new Product(){
+            Product  product1 = new Product(){
                 ProductId = 1,
                 Name = "pr1",
                 Price = 100,
                 Count = 10
             };
-            var product2 = new Product() {
+            Product product2 = new Product() {
                 ProductId = 2,
                 Name = "pr2",
                 Price = 200,
                 Count = 20
             };
-            var card = new Card(customer);
+            Card card = new Card(customer);
           
-            var expectedResult = new List<Product>(){
+            List<Product> expectedResult = new List<Product>(){
                 product1, product1, product2
             };
 
