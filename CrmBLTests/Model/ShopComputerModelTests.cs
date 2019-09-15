@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CrmBL.Model.Tests {
@@ -13,6 +14,7 @@ namespace CrmBL.Model.Tests {
         public void StartTest() {
             var  model = new ShopComputerModel();
             model.Start();
+            Thread.Sleep(5000);
         }
     }
 }
