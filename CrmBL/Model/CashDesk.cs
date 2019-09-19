@@ -89,5 +89,8 @@ namespace CrmBL.Model {
             return sum;
         }
 
+        public override string ToString() {
+            return $"Касса № {Number}";
+        }
     }
 }
