@@ -17,6 +17,7 @@ namespace CrmBL.Model {
         public int ExitCustomer { get; set;}
         public bool IsModel { get; set;}
         public int Count => Queue.Count;
+
         public event EventHandler<Check> CheckClosed; 
 
 
@@ -25,6 +26,7 @@ namespace CrmBL.Model {
             Seller = seller;
             Queue = new Queue<Card>();
             IsModel = true;
+            MaxQueueLenght = 10;
         }
 
         public void Enqueue(Card card) {
@@ -40,8 +42,7 @@ namespace CrmBL.Model {
         public decimal Dequeue() {
             decimal sum = 0;
 
-            if (Queue.Count == 0)
-            {
+            if (Queue.Count == 0) {
                 return 0;
             }
             var card = Queue.Dequeue();
