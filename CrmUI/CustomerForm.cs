@@ -34,8 +34,8 @@ namespace CrmUI {
 //                Name = nameCustomer.Text
 //            };
 //
-            var c = Customer ?? new Customer();
-            c.Name = nameCustomer.Text;
+            Customer = Customer ?? new Customer();
+            Customer.Name = nameCustomer.Text;
             Close();
         }
     }
