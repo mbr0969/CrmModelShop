@@ -12,7 +12,7 @@ namespace CrmUI {
         }
 
         public SellerForm(Seller seller) : this(){
-            Seller = seller;
+            Seller = seller ?? new Seller();
             nameSeller.Text = Seller.Name;
         }
 
