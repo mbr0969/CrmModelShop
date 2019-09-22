@@ -10,8 +10,7 @@ namespace CrmBL.Migrations
             AddColumn("dbo.Checks", "Price", c => c.Decimal(nullable: false, precision: 18, scale: 2));
         }
         
-        public override void Down()
-        {
+        public override void Down() {
             DropColumn("dbo.Checks", "Price");
         }
     }

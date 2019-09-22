@@ -31,7 +31,7 @@ namespace CrmBL.Model {
 
         public void Enqueue(Card card) {
 
-            if (Queue.Count <= MaxQueueLenght) {
+            if (Queue.Count < MaxQueueLenght) {
                 Queue.Enqueue(card);
             }
             else {
