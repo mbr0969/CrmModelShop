@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using CrmBL.Model;
 
@@ -6,10 +8,13 @@ namespace CrmUI {
     public partial class Main : Form {
 
         CrmContext  db;
+        Card card;
+        Customer customer;
 
         public Main() {
             InitializeComponent();
             db = new CrmContext();
+            card = new Card(customer);
         }
         private void ProductToolStripMenuItem_Click(object sender, EventArgs e) {
             var catalogProduct = new Catalog<Product>(db.Products, db);
@@ -64,6 +69,26 @@ namespace CrmUI {
         private void modelToolStripMenuItem_Click(object sender, EventArgs e) {
             var form = new ModelForm();
             form.Show();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+             
+            Task.Run(() =>
+            {
+                listBox1.Invoke((Action) delegate {
+                    var items = db.Products.ToArray();
+                    listBox1.Items.AddRange(items);
+                });
+            });
+        }
+
+        private void listBox1_DoubleClick(object sender, EventArgs e) {
+            if (listBox1.SelectedItem is Product product){
+                card.Add(product);
+
+
+            }
         }
     }
 }
