@@ -71,24 +71,30 @@ namespace CrmUI {
             form.Show();
         }
 
-        private void Main_Load(object sender, EventArgs e)
-        {
-             
-            Task.Run(() =>
-            {
-                listBox1.Invoke((Action) delegate {
-                    var items = db.Products.ToArray();
-                    listBox1.Items.AddRange(items);
+        private void Main_Load(object sender, EventArgs e) {
+
+            Task.Run(() => {
+
+                listBox1.Invoke((Action) delegate{
+                    UpdateList();
                 });
             });
         }
 
         private void listBox1_DoubleClick(object sender, EventArgs e) {
             if (listBox1.SelectedItem is Product product){
+
                 card.Add(product);
-
-
+                listBox2.Items.Add(product);
             }
         }
+
+        private void UpdateList() {
+            listBox1.Items.AddRange(db.Products.ToArray());
+            listBox2.Items.AddRange(card.GetAll().ToArray());
+        }
+
+
+
     }
 }

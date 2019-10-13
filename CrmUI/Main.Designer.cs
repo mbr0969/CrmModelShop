@@ -136,7 +136,7 @@
             this.listBox2.FormattingEnabled = true;
             this.listBox2.Location = new System.Drawing.Point(449, 53);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(362, 602);
+            this.listBox2.Size = new System.Drawing.Size(362, 199);
             this.listBox2.TabIndex = 2;
             // 
             // Main
